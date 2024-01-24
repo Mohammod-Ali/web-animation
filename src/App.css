@@ -10,12 +10,29 @@
 .box-1{
   position: absolute;
   background-color: red;
-  height: 200px;
+  height: 100%;
   width: 100%;
   transition-duration: 500ms;
   transition-timing-function: ease;
 }
 
+.box-2{
+  /* position: absolute; */
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  transform-origin: top;
+}
+
+.box-container-2{
+  overflow: hidden;
+}
+
 .box-1:hover {
   transform: translateY(150px);
+}
+.box-2:hover {
+  transform: rotate(180deg);
 }
