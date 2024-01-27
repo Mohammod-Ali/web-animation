@@ -1,10 +1,21 @@
-import { motion } from "framer-motion"
+import { easeInOut, motion } from "framer-motion"
 import { useRef } from "react";
 
 
 const parent = {
-     initial : {rotate: 0},
-     animate : {rotate: 360}
+    hidden: { scale: 0.9, x: 0, y: 0},
+    visible: {
+        x:[ 0, 300, -300, 0],
+        y: [ 0, 300, -300, 0],
+        scale: 1,
+        transition: {
+            ease : 'easeInOut',
+            duration: 5,
+            repeat: Infinity
+        },
+    },
+    //  initial : {rotate: 0},
+    //  animate : {rotate: 360}
     
 }
 
@@ -16,8 +27,8 @@ const Lesson1 = () => {
          className="border border-red-500">
             <motion.div className="size-64 bg-indigo-500  rounded-lg " 
             variants={parent}
-            initial='initial'
-            animate='animate'
+            initial='hidden'
+            animate='visible'
             transition={{type: 'spring', duration: 5}}
             drag
             dragSnapToOrigin
