@@ -7,11 +7,19 @@ const parent = {
     visible: {
         x:[ 0, 300, -300, 0],
         y: [ 0, 300, -300, 0],
+        rotate: [ 0, 300, -300, 0],
         scale: 1,
         transition: {
             ease : 'easeInOut',
             duration: 5,
-            repeat: Infinity
+            repeat: Infinity,
+            opacity: {
+                duration: 0.5,
+            },
+            rotate: {
+                delay: 1,
+                repeat: Infinity
+            }
         },
     },
     //  initial : {rotate: 0},
